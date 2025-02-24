@@ -1,8 +1,16 @@
 
+import autogen
 
 from dotenv import load_dotenv
 
 load_dotenv()
+
+config_list_gemini = autogen.config_list_from_json(
+    "OAI_CONFIG_LIST",
+    filter_dict={
+        "model": ["gemini-pro", "gemini-1.5-pro", "gemini-1.5-pro-001"],
+    },
+)
 
 def arxiv_search(query: str, max_results: int = 2) -> list:  # type: ignore[type-arg]
     """
@@ -31,5 +39,5 @@ def arxiv_search(query: str, max_results: int = 2) -> list:  # type: ignore[type
 
     return results
 
-result = arxiv_search("VFI interpolation of intermediate video frame, literature review")
-print(result)
+#result = arxiv_search("VFI interpolation of intermediate video frame, literature review")
+#print(result)

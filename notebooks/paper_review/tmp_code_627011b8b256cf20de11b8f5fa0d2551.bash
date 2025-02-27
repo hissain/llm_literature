@@ -1,1 +1,0 @@
-pip install -qqq weasyprint -vvv 

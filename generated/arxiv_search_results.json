@@ -1,0 +1,152 @@
+[
+  {
+    "title": "A Multi-In-Single-Out Network for Video Frame Interpolation without Optical Flow",
+    "authors": [
+      "Jaemin Lee",
+      "Minseok Seo",
+      "Sangwoo Lee",
+      "Hyobin Park",
+      "Dong-Geol Choi"
+    ],
+    "published": "2023-11-20",
+    "updated": "2023-12-05",
+    "abstract": "In general, deep learning-based video frame interpolation (VFI) methods have\npredominantly focused on estimating motion vectors between two input frames and\nwarping them to the target time. While this approach has shown impressive\nperformance for linear motion between two input frames, it exhibits limitations\nwhen dealing with occlusions and nonlinear movements. Recently, generative\nmodels have been applied to VFI to address these issues. However, as VFI is not\na task focused on generating plausible images, but rather on predicting\naccurate intermediate frames between two given frames, performance limitations\nstill persist. In this paper, we propose a multi-in-single-out (MISO) based VFI\nmethod that does not rely on motion vector estimation, allowing it to\neffectively model occlusions and nonlinear motion. Additionally, we introduce a\nnovel motion perceptual loss that enables MISO-VFI to better capture the\nspatio-temporal correlations within the video frames. Our MISO-VFI method\nachieves state-of-the-art results on VFI benchmarks Vimeo90K, Middlebury, and\nUCF101, with a significant performance gap compared to existing approaches.",
+    "pdf_url": "http://arxiv.org/pdf/2311.11602v3",
+    "primary_category": "cs.CV"
+  },
+  {
+    "title": "LDMVFI: Video Frame Interpolation with Latent Diffusion Models",
+    "authors": [
+      "Duolikun Danier",
+      "Fan Zhang",
+      "David Bull"
+    ],
+    "published": "2023-03-16",
+    "updated": "2023-12-11",
+    "abstract": "Existing works on video frame interpolation (VFI) mostly employ deep neural\nnetworks that are trained by minimizing the L1, L2, or deep feature space\ndistance (e.g. VGG loss) between their outputs and ground-truth frames.\nHowever, recent works have shown that these metrics are poor indicators of\nperceptual VFI quality. Towards developing perceptually-oriented VFI methods,\nin this work we propose latent diffusion model-based VFI, LDMVFI. This\napproaches the VFI problem from a generative perspective by formulating it as a\nconditional generation problem. As the first effort to address VFI using latent\ndiffusion models, we rigorously benchmark our method on common test sets used\nin the existing VFI literature. Our quantitative experiments and user study\nindicate that LDMVFI is able to interpolate video content with favorable\nperceptual quality compared to the state of the art, even in the\nhigh-resolution regime. Our code is available at\nhttps://github.com/danier97/LDMVFI.",
+    "pdf_url": "http://arxiv.org/pdf/2303.09508v3",
+    "primary_category": "eess.IV"
+  },
+  {
+    "title": "Video Frame Interpolation with Region-Distinguishable Priors from SAM",
+    "authors": [
+      "Yan Han",
+      "Xiaogang Xu",
+      "Yingqi Lin",
+      "Jiafei Wu",
+      "Zhe Liu"
+    ],
+    "published": "2023-12-26",
+    "updated": "2023-12-26",
+    "abstract": "In existing Video Frame Interpolation (VFI) approaches, the motion estimation\nbetween neighboring frames plays a crucial role. However, the estimation\naccuracy in existing methods remains a challenge, primarily due to the inherent\nambiguity in identifying corresponding areas in adjacent frames for\ninterpolation. Therefore, enhancing accuracy by distinguishing different\nregions before motion estimation is of utmost importance. In this paper, we\nintroduce a novel solution involving the utilization of open-world segmentation\nmodels, e.g., SAM (Segment Anything Model), to derive Region-Distinguishable\nPriors (RDPs) in different frames. These RDPs are represented as\nspatial-varying Gaussian mixtures, distinguishing an arbitrary number of areas\nwith a unified modality. RDPs can be integrated into existing motion-based VFI\nmethods to enhance features for motion estimation, facilitated by our designed\nplay-and-plug Hierarchical Region-aware Feature Fusion Module (HRFFM). HRFFM\nincorporates RDP into various hierarchical stages of VFI's encoder, using\nRDP-guided Feature Normalization (RDPFN) in a residual learning manner. With\nHRFFM and RDP, the features within VFI's encoder exhibit similar\nrepresentations for matched regions in neighboring frames, thus improving the\nsynthesis of intermediate frames. Extensive experiments demonstrate that HRFFM\nconsistently enhances VFI performance across various scenes.",
+    "pdf_url": "http://arxiv.org/pdf/2312.15868v1",
+    "primary_category": "cs.CV"
+  },
+  {
+    "title": "Boost Video Frame Interpolation via Motion Adaptation",
+    "authors": [
+      "Haoning Wu",
+      "Xiaoyun Zhang",
+      "Weidi Xie",
+      "Ya Zhang",
+      "Yanfeng Wang"
+    ],
+    "published": "2023-06-24",
+    "updated": "2023-10-05",
+    "abstract": "Video frame interpolation (VFI) is a challenging task that aims to generate\nintermediate frames between two consecutive frames in a video. Existing\nlearning-based VFI methods have achieved great success, but they still suffer\nfrom limited generalization ability due to the limited motion distribution of\ntraining datasets. In this paper, we propose a novel optimization-based VFI\nmethod that can adapt to unseen motions at test time. Our method is based on a\ncycle-consistency adaptation strategy that leverages the motion characteristics\namong video frames. We also introduce a lightweight adapter that can be\ninserted into the motion estimation module of existing pre-trained VFI models\nto improve the efficiency of adaptation. Extensive experiments on various\nbenchmarks demonstrate that our method can boost the performance of two-frame\nVFI models, outperforming the existing state-of-the-art methods, even those\nthat use extra input.",
+    "pdf_url": "http://arxiv.org/pdf/2306.13933v3",
+    "primary_category": "cs.CV"
+  },
+  {
+    "title": "A Subjective Quality Study for Video Frame Interpolation",
+    "authors": [
+      "Duolikun Danier",
+      "Fan Zhang",
+      "David Bull"
+    ],
+    "published": "2022-02-15",
+    "updated": "2023-06-22",
+    "abstract": "Video frame interpolation (VFI) is one of the fundamental research areas in\nvideo processing and there has been extensive research on novel and enhanced\ninterpolation algorithms. The same is not true for quality assessment of the\ninterpolated content. In this paper, we describe a subjective quality study for\nVFI based on a newly developed video database, BVI-VFI. BVI-VFI contains 36\nreference sequences at three different frame rates and 180 distorted videos\ngenerated using five conventional and learning based VFI algorithms. Subjective\nopinion scores have been collected from 60 human participants, and then\nemployed to evaluate eight popular quality metrics, including PSNR, SSIM and\nLPIPS which are all commonly used for assessing VFI methods. The results\nindicate that none of these metrics provide acceptable correlation with the\nperceived quality on interpolated content, with the best-performing metric,\nLPIPS, offering a SROCC value below 0.6. Our findings show that there is an\nurgent need to develop a bespoke perceptual quality metric for VFI. The BVI-VFI\ndataset is publicly available and can be accessed at\nhttps://danier97.github.io/BVI-VFI/.",
+    "pdf_url": "http://arxiv.org/pdf/2202.07727v2",
+    "primary_category": "eess.IV"
+  },
+  {
+    "title": "Motion-aware Latent Diffusion Models for Video Frame Interpolation",
+    "authors": [
+      "Zhilin Huang",
+      "Yijie Yu",
+      "Ling Yang",
+      "Chujun Qin",
+      "Bing Zheng",
+      "Xiawu Zheng",
+      "Zikun Zhou",
+      "Yaowei Wang",
+      "Wenming Yang"
+    ],
+    "published": "2024-04-21",
+    "updated": "2024-08-02",
+    "abstract": "With the advancement of AIGC, video frame interpolation (VFI) has become a\ncrucial component in existing video generation frameworks, attracting\nwidespread research interest. For the VFI task, the motion estimation between\nneighboring frames plays a crucial role in avoiding motion ambiguity. However,\nexisting VFI methods always struggle to accurately predict the motion\ninformation between consecutive frames, and this imprecise estimation leads to\nblurred and visually incoherent interpolated frames. In this paper, we propose\na novel diffusion framework, motion-aware latent diffusion models (MADiff),\nwhich is specifically designed for the VFI task. By incorporating motion priors\nbetween the conditional neighboring frames with the target interpolated frame\npredicted throughout the diffusion sampling procedure, MADiff progressively\nrefines the intermediate outcomes, culminating in generating both visually\nsmooth and realistic results. Extensive experiments conducted on benchmark\ndatasets demonstrate that our method achieves state-of-the-art performance\nsignificantly outperforming existing approaches, especially under challenging\nscenarios involving dynamic textures with complex motion.",
+    "pdf_url": "http://arxiv.org/pdf/2404.13534v3",
+    "primary_category": "cs.CV"
+  },
+  {
+    "title": "BiM-VFI: directional Motion Field-Guided Frame Interpolation for Video with Non-uniform Motions",
+    "authors": [
+      "Wonyong Seo",
+      "Jihyong Oh",
+      "Munchurl Kim"
+    ],
+    "published": "2024-12-16",
+    "updated": "2024-12-29",
+    "abstract": "Existing Video Frame interpolation (VFI) models tend to suffer from\ntime-to-location ambiguity when trained with video of non-uniform motions, such\nas accelerating, decelerating, and changing directions, which often yield\nblurred interpolated frames. In this paper, we propose (i) a novel motion\ndescription map, Bidirectional Motion field (BiM), to effectively describe\nnon-uniform motions; (ii) a BiM-guided Flow Net (BiMFN) with Content-Aware\nUpsampling Network (CAUN) for precise optical flow estimation; and (iii)\nKnowledge Distillation for VFI-centric Flow supervision (KDVCF) to supervise\nthe motion estimation of VFI model with VFI-centric teacher flows. The proposed\nVFI is called a Bidirectional Motion field-guided VFI (BiM-VFI) model.\nExtensive experiments show that our BiM-VFI model significantly surpasses the\nrecent state-of-the-art VFI methods by 26% and 45% improvements in LPIPS and\nSTLPIPS respectively, yielding interpolated frames with much fewer blurs at\narbitrary time instances.",
+    "pdf_url": "http://arxiv.org/pdf/2412.11365v2",
+    "primary_category": "cs.CV"
+  },
+  {
+    "title": "Event-Based Video Frame Interpolation With Cross-Modal Asymmetric Bidirectional Motion Fields",
+    "authors": [
+      "Taewoo Kim",
+      "Yujeong Chae",
+      "Hyun-Kurl Jang",
+      "Kuk-Jin Yoon"
+    ],
+    "published": "2025-02-19",
+    "updated": "2025-02-19",
+    "abstract": "Video Frame Interpolation (VFI) aims to generate intermediate video frames\nbetween consecutive input frames. Since the event cameras are bio-inspired\nsensors that only encode brightness changes with a micro-second temporal\nresolution, several works utilized the event camera to enhance the performance\nof VFI. However, existing methods estimate bidirectional inter-frame motion\nfields with only events or approximations, which can not consider the complex\nmotion in real-world scenarios. In this paper, we propose a novel event-based\nVFI framework with cross-modal asymmetric bidirectional motion field\nestimation. In detail, our EIF-BiOFNet utilizes each valuable characteristic of\nthe events and images for direct estimation of inter-frame motion fields\nwithout any approximation methods. Moreover, we develop an interactive\nattention-based frame synthesis network to efficiently leverage the\ncomplementary warping-based and synthesis-based features. Finally, we build a\nlarge-scale event-based VFI dataset, ERF-X170FPS, with a high frame rate,\nextreme motion, and dynamic textures to overcome the limitations of previous\nevent-based VFI datasets. Extensive experimental results validate that our\nmethod shows significant performance improvement over the state-of-the-art VFI\nmethods on various datasets. Our project pages are available at:\nhttps://github.com/intelpro/CBMNet",
+    "pdf_url": "http://arxiv.org/pdf/2502.13716v1",
+    "primary_category": "cs.CV"
+  },
+  {
+    "title": "Perceptual Quality Assessment for Video Frame Interpolation",
+    "authors": [
+      "Jinliang Han",
+      "Xiongkuo Min",
+      "Yixuan Gao",
+      "Jun Jia",
+      "Lei Sun",
+      "Zuowei Cao",
+      "Yonglin Luo",
+      "Guangtao Zhai"
+    ],
+    "published": "2023-12-25",
+    "updated": "2023-12-25",
+    "abstract": "The quality of frames is significant for both research and application of\nvideo frame interpolation (VFI). In recent VFI studies, the methods of\nfull-reference image quality assessment have generally been used to evaluate\nthe quality of VFI frames. However, high frame rate reference videos,\nnecessities for the full-reference methods, are difficult to obtain in most\napplications of VFI. To evaluate the quality of VFI frames without reference\nvideos, a no-reference perceptual quality assessment method is proposed in this\npaper. This method is more compatible with VFI application and the evaluation\nscores from it are consistent with human subjective opinions. A new quality\nassessment dataset for VFI was constructed through subjective experiments\nfirstly, to assess the opinion scores of interpolated frames. The dataset was\ncreated from triplets of frames extracted from high-quality videos using 9\nstate-of-the-art VFI algorithms. The proposed method evaluates the perceptual\ncoherence of frames incorporating the original pair of VFI inputs.\nSpecifically, the method applies a triplet network architecture, including\nthree parallel feature pipelines, to extract the deep perceptual features of\nthe interpolated frame as well as the original pair of frames. Coherence\nsimilarities of the two-way parallel features are jointly calculated and\noptimized as a perceptual metric. In the experiments, both full-reference and\nno-reference quality assessment methods were tested on the new quality dataset.\nThe results show that the proposed method achieves the best performance among\nall compared quality assessment methods on the dataset.",
+    "pdf_url": "http://arxiv.org/pdf/2312.15659v1",
+    "primary_category": "eess.IV"
+  },
+  {
+    "title": "Disentangled Motion Modeling for Video Frame Interpolation",
+    "authors": [
+      "Jaihyun Lew",
+      "Jooyoung Choi",
+      "Chaehun Shin",
+      "Dahuin Jung",
+      "Sungroh Yoon"
+    ],
+    "published": "2024-06-25",
+    "updated": "2024-12-19",
+    "abstract": "Video Frame Interpolation (VFI) aims to synthesize intermediate frames\nbetween existing frames to enhance visual smoothness and quality. Beyond the\nconventional methods based on the reconstruction loss, recent works have\nemployed generative models for improved perceptual quality. However, they\nrequire complex training and large computational costs for pixel space\nmodeling. In this paper, we introduce disentangled Motion Modeling (MoMo), a\ndiffusion-based approach for VFI that enhances visual quality by focusing on\nintermediate motion modeling. We propose a disentangled two-stage training\nprocess. In the initial stage, frame synthesis and flow models are trained to\ngenerate accurate frames and flows optimal for synthesis. In the subsequent\nstage, we introduce a motion diffusion model, which incorporates our novel\nU-Net architecture specifically designed for optical flow, to generate\nbi-directional flows between frames. By learning the simpler low-frequency\nrepresentation of motions, MoMo achieves superior perceptual quality with\nreduced computational demands compared to the generative modeling methods on\nthe pixel space. MoMo surpasses state-of-the-art methods in perceptual metrics\nacross various benchmarks, demonstrating its efficacy and efficiency in VFI.",
+    "pdf_url": "http://arxiv.org/pdf/2406.17256v2",
+    "primary_category": "cs.CV"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Video Object Segmentation-aware Video Frame Interpolation - Jun ...",
+    "link": "https://openaccess.thecvf.com/content/ICCV2023/papers/Yoo_Video_Object_Segmentation-aware_Video_Frame_Interpolation_ICCV_2023_paper.pdf",
+    "snippet": "In this paper, we proposed a VOS-aware VFI training framework called VOS-VFI for interpolating intermediate frames with clear object boundaries. Using the\u00a0...",
+    "body": "%PDF-1.6 %\ufffd\ufffd\ufffd\ufffd 1 0 obj << /CP2 3 0 R /FICL:Enfocus 4 0 R /Metadata 5 0 R /Names 87 0 R /OpenAction 32 0 R /PageMode /UseNone /Pages 107 0 R /Type /Catalog >> endobj 2 0 obj << /Author (Jun-Sang Yoo; Hongjae Lee; Seung-Won Jung) /Producer (pikepdf 8.4.1) /Subject (IEEE International Conference on Computer Vision) /Title (Video Object Segmentation-aware Video Frame Interpolation) >> endobj 3 0 obj << /PrivateData 108 0 R /PrivateDataFilter 109 0 R >> endobj 4 0 obj << /CertifiedWF 110 0 R >>"
+  },
+  {
+    "title": "EMCFN: Edge-based Multi-scale Cross Fusion Network for video ...",
+    "link": "https://www.sciencedirect.com/science/article/abs/pii/S1047320324001822",
+    "snippet": "Video frame interpolation (VFI) is used to synthesize one or more intermediate frames ... research hotspot in the field of video processing, frame interpolation\u00a0...",
+    "body": "ScienceDirect Skip to main content ScienceDirect Help There was a problem providing the content you requested Please contact our support team for more information and provide the details below. Reference number: 91861a0ee8c2a48b IP Address: 103.163.51.6 ::CLOUDFLARE_ERROR_1000S_BOX:: About ScienceDirect Remote access Shopping cart Advertise Contact and support Terms and conditions Privacy policy Cookies are used by this site. Cookie Settings All content on this site: Copyright \u00a9 2024 Elsevier"
+  },
+  {
+    "title": "Video Frame Interpolation: A Comprehensive Survey | ACM ...",
+    "link": "https://dl.acm.org/doi/10.1145/3556544",
+    "snippet": "We give a comprehensive overview of VFI, including benchmark datasets, performance metrics, the systematic comparison of existing advanced methods, and the\u00a0...",
+    "body": "Video Frame Interpolation: A Comprehensive Survey | ACM Transactions on Multimedia Computing, Communications, and Applications skip to main content Advanced Search Browse About Sign in Register Advanced Search Journals Magazines Proceedings Books SIGs Conferences People More Search ACM Digital Library Search Search Advanced Search ACM Transactions on Multimedia Computing, Communications, and Applications Journal Home Just Accepted Latest Issue Special Issues Archive Authors Author Guidelines"
+  },
+  {
+    "title": "Application of video frame interpolation to markerless, single ...",
+    "link": "https://link.springer.com/article/10.1007/s12283-023-00419-3",
+    "snippet": "Apr 28, 2023 ... The current study demonstrates that VFI further improves the precision of temporal gait parameters such as step time, reducing both systematic\u00a0...",
+    "body": "Application of video frame interpolation to markerless, single-camera gait analysis | Sports Engineering Skip to main content Log in Menu Find a journal Publish with us Track your research Search Cart Home Sports Engineering Article Application of video frame interpolation to markerless, single-camera gait analysis Technical Note Open access Published: 28 April 2023 Volume 26 , article number 22 , ( 2023 ) Cite this article Download PDF You have full access to this open access article Sports"
+  },
+  {
+    "title": "Sain: Similarity-Aware Video Frame Interpolation | IEEE Conference ...",
+    "link": "https://ieeexplore.ieee.org/document/9747211",
+    "snippet": "Video frame interpolation (VFI) aims to synthesize an intermediate frame between two consecutive original frames. Most existing methods simply linearly\u00a0...",
+    "body": "Request Rejected The requested URL was rejected. Please consult with your administrator. Your support ID is: < 1064046699519118197> [Go Back]"
+  },
+  {
+    "title": "BVI-VFI: A Video Quality Database for Video Frame Interpolation",
+    "link": "https://www.research.ed.ac.uk/files/466544497/BVI-VFI_accepted_version_.pdf",
+    "snippet": "We first briefly review the relevant literature in Section II, and then ... Zhou, \u201cRIFE: Real- time intermediate flow estimation for video frame interpolation,\u201d\u00a0...",
+    "body": "Just a moment... Enable JavaScript and cookies to continue"
+  },
+  {
+    "title": "TTVFI: Learning Trajectory-Aware Transformer for Video Frame ...",
+    "link": "https://ieeexplore.ieee.org/document/10215337/",
+    "snippet": "Aug 11, 2023 ... Video frame interpolation (VFI) aims to synthesize an intermediate frame between two consecutive frames. State-of-the-art approaches usually\u00a0...",
+    "body": "Request Rejected The requested URL was rejected. Please consult with your administrator. Your support ID is: < 8203162010607620503> [Go Back]"
+  },
+  {
+    "title": "Generalizable Implicit Motion Modeling for Video Frame Interpolation",
+    "link": "https://proceedings.neurips.cc/paper_files/paper/2024/file/7495fa446f10e9edef6e47b2d327596e-Paper-Conference.pdf",
+    "snippet": "In this study, we explore a more effective and generalizable implicit approach to motion modeling for VFI. Inspired by the success of implicit neural\u00a0...",
+    "body": "%PDF-1.5 %\ufffd\ufffd\ufffd\ufffd 730 0 obj << /Linearized 1 /L 7416325 /H [ 2169 494 ] /O 734 /E 100073 /N 24 /T 7411673 >> endobj 731 0 obj << /Type /XRef /Length 91 /Filter /FlateDecode /DecodeParms << /Columns 5 /Predictor 12 >> /W [ 1 3 1 ] /Index [ 730 214 ] /Info 250 0 R /Root 732 0 R /Size 944 /Prev 7411674 /ID [<16ed94e7725f00952f087b350d7e2356> ] >> stream x\ufffdcbd`\ufffdg`b``8 \"\ufffd\u0015@$c#\ufffddz\u0007f\ufffdH^}\u0010Y\ufffd\u0002D:\u0019\u0003I\ufffd /\u0010\u06ec D\ufffd\ufffd\u0001\ufffd\u032cH$\u001b\ufffd\u0014\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd7\ufffd|\u0006\ufffdQr\ufffd\ufffd&\ufffd8w\ufffd\ufffd0J\u000e}\u0012\u0000\ufffd\ufffd \ufffd endstream endobj 732 0 obj << /Names 845 0 R /OpenAction 887"
+  },
+  {
+    "title": "Jayoon Koo | 4 Publications | Related Authors",
+    "link": "https://scispace.com/authors/jayoon-koo-21uet2la",
+    "snippet": "TL;DR: UPR-Net as mentioned in this paper proposes a unified pyramid recurrent network for frame interpolation, where optical flow is estimated to guide the\u00a0...",
+    "body": "ERROR: The request could not be satisfied 403 ERROR The request could not be satisfied. Request blocked. We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again later, or contact the app or website owner. If you provide content to customers through CloudFront, you can find steps to troubleshoot and help prevent this error by reviewing the CloudFront documentation. Generated by cloudfront (CloudFront) Request ID:"
+  },
+  {
+    "title": "Framer: Interactive Frame Interpolation | OpenReview",
+    "link": "https://openreview.net/forum?id=Lp40Z40N07",
+    "snippet": "... frames to enhance video frame interpolation (VFI). Previous methods struggle ... video frame interpolation across different numbers of intermediate frames,\u00a0...",
+    "body": "Framer: Interactive Frame Interpolation | OpenReview Toggle navigation OpenReview .net Login Open Peer Review. Open Publishing. Open Access. Open Discussion. Open Recommendations. Open Directory. Open API. Open Source. \u00d7 Framer: Interactive Frame Interpolation Wen Wang , Qiuyu Wang , Kecheng Zheng , Hao OUYANG , Zhekai Chen , Biao Gong , Hao Chen , Yujun Shen , Chunhua Shen Published: 22 Jan 2025, Last Modified: 21 Feb 2025 ICLR 2025 Poster Everyone Revisions BibTeX CC BY 4.0 Keywords : Video"
+  }
+]

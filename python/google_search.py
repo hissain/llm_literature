@@ -1,6 +1,7 @@
 
 import os
 import time
+import json
 
 import requests
 from bs4 import BeautifulSoup
@@ -8,7 +9,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-def google_search(query: str, num_results: int = 2, max_chars: int = 500) -> list:  # type: ignore[type-arg]
+def google_search(query: str, num_results: int = 10, max_chars: int = 1000) -> list:
     
     api_key = os.getenv("GOOGLE_API_KEY")
     search_engine_id = os.getenv("GOOGLE_SEARCH_ENGINE_ID")
@@ -49,10 +50,13 @@ def google_search(query: str, num_results: int = 2, max_chars: int = 500) -> lis
         enriched_results.append(
             {"title": item["title"], "link": item["link"], "snippet": item["snippet"], "body": body}
         )
-        time.sleep(1)  # Be respectful to the servers
+        time.sleep(0.5)  # Be respectful to the servers
+
+    with open('generated/google_search_results.json', 'w') as f:
+        json.dump(enriched_results, f, indent=2)
 
     return enriched_results
 
 
-result = google_search("no code tools for building multi agent ai systems")
+result = google_search("VFI interpolation of intermediate video frame, literature review")
 print(result)

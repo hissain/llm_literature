@@ -1,88 +1,86 @@
 # from semanticscholar import SemanticScholar
 # sch = SemanticScholar()
-# query = "machine learning algorithms"
+# query = "BCG Signal Processing"
 # search_results = sch.search_paper(query, limit=10)
 
 # for paper in search_results:
 #     print(paper.title)
 
 
+from semanticscholar import SemanticScholar
+import markdown2
+import os
+from weasyprint import HTML
 
-try:
-    from semanticscholar import SemanticScholar
-    from markdown2 import markdown
-    from weasyprint import HTML
-except ModuleNotFoundError:
-    print("Error: Required packages not found. Please install them using:")
-    print("pip install semanticscholar markdown2 weasyprint")
-    exit(1)
-
-def search_papers(query, year_limit=None):
+def search_and_summarize_papers(query, limit=5):
     sch = SemanticScholar()
-    search_results = sch.search_paper(query, limit=10)
+    search_results = sch.search_paper(query, limit=limit)
 
-    filtered_results = []
+    papers = []
+    count = 0
     for paper in search_results:
-        if year_limit is None or (paper.year is not None and paper.year >= year_limit):
-             filtered_results.append(paper)
-    return filtered_results
-
-def create_review_document(query, year_limit=None):
-    papers = search_papers(query, year_limit)
+        if count >= limit:
+            break
+        print(paper.title)
+        papers.append({
+            "title": paper.title,
+            "authors": [author.name for author in paper.authors],
+            "year": paper.year,
+            "abstract": paper.abstract,
+            "url": paper.url
+        })
+        count += 1
 
     if not papers:
-        return "No papers found."
-
-    review = "# Technical Review on " + query + "\n\n"
-    review += "## Introduction\n\n"
-    review += "This review explores recent advancements in " + query + ". It summarizes key findings from relevant publications, highlighting current trends and challenges in the field.\n\n"
-
-    review += "## Paper Summaries\n\n"
-
-    summary_texts = []
-    for paper in papers:
-        review += f"### {paper.title}\n\n"
-        review += f"* **Authors:** {', '.join(paper.authors)}\n" if paper.authors else ""
-        review += f"* **Year:** {paper.year}\n" if paper.year else ""
-        review += f"* **Venue:** {paper.venue}\n" if paper.venue else ""
-        review += f"* **DOI:** [{paper.doi}]({paper.doi})\n\n" if paper.doi else ""
-        abstract = paper.abstract if paper.abstract else "Abstract not available."
-        review += f"* **Abstract:** {abstract}\n\n"
-
-        summary_texts.append(abstract)
-
-    review += "## Summary of Publications\n\n"
-
-    overall_summary = f"Research in {query} has shown significant progress. "
-    overall_summary += ". ".join([f"[{i+1}] explored {summary}" for i, summary in enumerate(summary_texts)])
-    word_count = len(overall_summary.split())
-    if word_count > 150:
-        overall_summary = " ".join(overall_summary.split()[:150]) + "..."
+        return "No results found."
+    else:
+        print(f"Processed {len(papers)} papers")
+        return papers
 
 
-    review += overall_summary + "\n\n"
-    references = ""
+def create_markdown_report(papers, query):
+    report = f"# Technical Review on {query}\n\n"
+    report += "## Introduction\nThis report reviews recent publications on " + query + ".\n\n"
+
     for i, paper in enumerate(papers):
-        references += f"[{i+1}] {', '.join(paper.authors)}, \"{paper.title},\""
-        references += f" *{paper.venue}*, " if paper.venue else ""
-        references += str(paper.year) if paper.year is not None else ""
-        references += ".\n"
+        report += f"## Paper {i+1}: {paper['title']}\n"
+        report += f"**Authors:** {', '.join(paper['authors'])}\n"
+        if paper['year']:
+            report += f"**Year:** {paper['year']}\n"
+        report += f"**URL:** {paper['url']}\n"
+        report += f"**Abstract:** {paper['abstract']}\n\n"
 
-    review += "## References\n\n"
-    review += references
+    summary = "## Summary\n"
+    summary += "Recent research in BCG signal processing focuses on diverse areas. "
+    for i, paper in enumerate(papers):
+        short_title = paper['title'].split(':')[0] if ':' in paper['title'] else paper['title']
+        summary += f"[{i+1}] explored {short_title}. "
 
-    return review
+
+    report += summary
+
+    return report
 
 
 def create_pdf(markdown_content, filename):
-    html = markdown(markdown_content)
+    html = markdown2.markdown(markdown_content)
     HTML(string=html).write_pdf(filename)
 
-query = "BCG Signal Processing"
-review_document = create_review_document(query, year_limit=2018)
 
-if review_document:
-    create_pdf(review_document, "BCG_Signal_Processing_review2.pdf")
-    print("TERMINATE")
-else:
-    print("CONTINUE")
+
+query = "BCG Signal Processing"
+papers = search_and_summarize_papers(query, limit=5)
+print(papers)
+
+# if isinstance(papers, str): # Handle the case where no results are returned
+#     print(papers)
+# else:
+#     markdown_report = create_markdown_report(papers, query)
+
+#     with open("BCG_Signal_Processing_review.md", "w") as f:
+#         f.write(markdown_report)
+    
+#     create_pdf(markdown_report, "BCG_Signal_Processing_review.pdf")
+
+#     print("TERMINATE")
+

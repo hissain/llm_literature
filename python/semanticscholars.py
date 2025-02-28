@@ -21,13 +21,18 @@ def search_and_summarize_papers(query, limit=5):
     for paper in search_results:
         if count >= limit:
             break
-        print(paper.title)
+        # print(paper)
         papers.append({
             "title": paper.title,
             "authors": [author.name for author in paper.authors],
             "year": paper.year,
             "abstract": paper.abstract,
-            "url": paper.url
+            "sch_url": paper.url,
+            "citationCount": paper.citationCount,
+            "bibtex": paper.citationStyles["bibtex"],
+            "url": "https://doi.org/" + paper.externalIds["DOI"],
+            "venue": paper.venue,
+            "volume": paper.journal["volume"]
         })
         count += 1
 
@@ -67,9 +72,8 @@ def create_pdf(markdown_content, filename):
     HTML(string=html).write_pdf(filename)
 
 
-
-query = "BCG Signal Processing"
-papers = search_and_summarize_papers(query, limit=5)
+query = "Detecting HR using BCG and IMU"
+papers = search_and_summarize_papers(query, limit=1)
 print(papers)
 
 # if isinstance(papers, str): # Handle the case where no results are returned

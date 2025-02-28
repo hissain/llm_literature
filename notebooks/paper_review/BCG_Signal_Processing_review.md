@@ -48,7 +48,11 @@ Ballistocardiography (BCG) signal processing is crucial for extracting useful ph
 ## References
 
 [ 1 ] Chulseung Yang, G. Ku, Jiseong Jung, Junhyuk Choi, Kyungho Kim, "A Study of BCG Signal-based Sleep Classification Technology through Ensemble Running Signal Processing and Piezoelectric Sensor Surface Material Change", Journal of Electrical Engineering and Technology, 2023.
+
 [ 2 ] Yifan Liu, W. Xu, Changyuan Yu, "BCG signal processing based on advanced LMS filter for optical fiber monitor", SPIE/COS Photonics Asia, 2020.
+
 [ 3 ] Haihong Zhang, Zimin Wang, Kejun Dong, Soon Huat Ng, Zhiping Lin, "Towards precise tracking of electric-mechanical cardiac time intervals through joint ECG and BCG sensing and signal processing", Annual International Conference of the IEEE Engineering in Medicine and Biology Society, 2017.
+
 [ 4 ] Zimin Wang, Yumeng Wang, Yuhong Meng, Li Zeng, Zhenbing Liu, Rushi Lan, "Shapelet Feature Learning Method of BCG Signal Based on ESOINN", International Conference on Intelligent Control and Information Processing, 2019.
+
 [ 5 ] A. S, A. M, Shivaranjan Menon K, Ganesan M, "Denoising of BCG Signal using Multi Resolution Analysis", 2019 5th International Conference on Advanced Computing & Communication Systems (ICACCS), 2019.
